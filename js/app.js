@@ -68,7 +68,6 @@ function eventListener(){
     document.addEventListener("DOMContentLoaded", insertValues);
 }
 
-
 function insertValues(){
     daysParagraph.textContent = timer.days;
     hoursParagraph.textContent = timer.hours;
