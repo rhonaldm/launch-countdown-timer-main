@@ -1,0 +1,243 @@
+
+* {box-sizing: border-box;}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    margin: 0; 
+}
+
+h1{
+    font-family: 'Red Hat Text', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    padding-top: 80px;  
+    color: white;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: url(../images/bg-stars.svg) top/100% 70% no-repeat, 
+                url(../images/pattern-hills.svg) bottom  /100% 25% no-repeat,
+                linear-gradient(hsl(234, 17%, 12%), hsl(257, 20%, 14%), hsl(266, 19%, 15%));
+}
+
+.countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    color: hsl(237, 18%, 59%);
+    margin-top: 30px;
+}
+
+.cards-container{
+    display: flex;
+       
+}
+
+.scene-container{
+    position: relative;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.scene{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    background:linear-gradient(hsl(235, 16%, 14%), hsl(236, 21%, 26%) ) ;
+    perspective: 500px;
+    border-radius: 5px;
+    box-shadow: 0 5px hsl(234, 17%, 12%); 
+}
+
+.card{
+    z-index: -1;
+    width: 100%;
+    height: 50%;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+    transform-style: preserve-3d;
+    transform-origin: bottom;
+}
+
+.cardface{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    
+    
+}
+
+.cardfront{
+    border-radius: 5px 5px 0 0;
+    background: hsl(235, 16%, 14%);
+}
+
+.cardback{
+    transform: rotateX(180deg);
+    background:hsl(236, 21%, 26%);
+    border-radius:0 0 5px 5px;
+}
+
+
+.card.is-flipped{
+    transform:rotate3d(1,0,0,-180deg);
+    
+}
+
+.notVisible{
+    display: none;
+}
+
+.line{
+    position: absolute;
+    top: 40px;
+    width: 80px;
+    height: 0.5px;
+    background-color: hsla(0, 0%, 0%, 0.363);
+}
+
+
+
+
+
+
+.number{
+    position: absolute;
+    top:50%;
+    margin: 0;
+    margin-top: -31.75px;
+    
+    
+    left:50%;
+    transform: translateX(-50%);
+    
+    font-family:'Red Hat Text', sans-serif;
+    font-weight:700;
+    font-size: 48px;
+    color:hsl(345, 95%, 68%);  
+}
+
+#backseconds{
+    position: absolute;
+    top: -70%;
+    
+}
+
+.bottomRightConer{
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top:35px;
+    right: 0px; 
+}
+
+.bottomLeftConer{
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 0 100% 0 0;
+    position: absolute;
+    top: 35px;
+    left: 0px;    
+}
+
+.topRightConer{
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 0 0 0 100%;
+    position: absolute;
+    top:0px;
+    right: 0px;
+}
+
+.topLeftConer{
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 0 0 100% 0;
+    position: absolute;
+    top:0px;
+    left: 0px;    
+}
+
+.bottomRightConerFix{
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top:35px;
+    right: 0px; 
+}
+
+.bottomLeftConerFix{
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 0 100% 0 0;
+    position: absolute;
+    top: 35px;
+    left: 0px;    
+}
+
+.topRightConerFix{
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 0 0 0 100%;
+    position: absolute;
+    top:40px;
+    right: 0px;
+}
+
+.topLeftConerFix{
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 0 0 100% 0;
+    position: absolute;
+    top:40px;
+    left: 0px;    
+}
+
+.time{
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
